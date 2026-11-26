@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/my-web-app
+  IMAGE_NAME: ${{ secrets.DOCKERHUB_USERNAME }}/simple-golang-multi-stage
 
 jobs:
   # JOB 1: Build & Push ke Docker Hub
