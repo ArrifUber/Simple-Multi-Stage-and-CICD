@@ -1,0 +1,9 @@
+# Build output
+/api
+/api.exe
+/simple-api
+/simple-api.exe
+
+# Logs
+*.log
+server.out
