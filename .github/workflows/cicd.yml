@@ -17,7 +17,6 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      Contoh jika pakai Go:
       - name: Set up Go
         uses: actions/setup-go@v5
         with:
@@ -47,7 +46,7 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
 
-  # JOB 2: Deploy ke Lokal (Berjalan di Self-Hosted Runner)
+  # JOB 2: Deploy ke Lokal
   deploy:
     needs: build-and-push
     runs-on: self-hosted
