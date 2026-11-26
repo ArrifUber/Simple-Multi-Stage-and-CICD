@@ -6,6 +6,7 @@ memory, so everything resets when the server restarts.
 ## Run
 
 ```bash
+cd app
 go run .
 # or
 go build -o simple-api . && ./simple-api
@@ -16,6 +17,20 @@ The server listens on `:8080` by default. Override with `PORT`:
 ```bash
 PORT=3000 go run .
 ```
+
+## Tests
+
+```bash
+cd app
+go test ./...            # run all tests
+go test -v ./...         # verbose output
+go test -race ./...      # check for data races
+go test -cover ./...     # coverage summary
+```
+
+Tests cover validation, the in-memory store (including concurrent access),
+and every HTTP endpoint (success paths, 400/404/405 responses, and the
+1 MB body limit).
 
 ## Endpoints
 
