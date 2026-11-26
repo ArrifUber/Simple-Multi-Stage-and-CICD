@@ -1,0 +1,6 @@
+services:
+  app:
+    container_name: go_backend
+    image: arifbudianto/simple-golang-multi-stage:latest
+    ports:
+      - "8080:8080"
